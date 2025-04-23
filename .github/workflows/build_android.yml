@@ -10,7 +10,7 @@ env:
 
 jobs:
   fetch_thirdparty_build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     
@@ -28,7 +28,7 @@ jobs:
         tar xvzf thirdparty_build.tar.gz
 
   fetch_thirdparty_port:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     
@@ -46,7 +46,7 @@ jobs:
         tar xvzf thirdparty_port.tar.gz
 
   build_android:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     needs: 
       - fetch_thirdparty_build
       - fetch_thirdparty_port
