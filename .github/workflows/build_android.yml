@@ -1,6 +1,6 @@
 name: build android
 on:
-  workflow_dispatch: #  Push events to matching v*, i.e. v1.0, v20.15.10
+  push: {tags:  ['v*']} #  Push events to matching v*, i.e. v1.0, v20.15.10
 
 permissions:
   contents: write
